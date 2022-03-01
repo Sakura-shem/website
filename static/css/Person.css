@@ -1,0 +1,382 @@
+/*  Z轴 头部：1 轮播：1 登录：7 ， 弹窗：7 轮播内容：6 */
+
+/* 定义变量 */
+:root {
+    --background-color:#F7F2F2;
+}
+
+/* ======================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: Helvetica, "PingFang SC", "Microsoft Yahei", sans-serif;
+}  
+body, html{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+body{
+    background-image: url("../Image/Person_Background03.JPG");
+}
+/* ================================ */
+
+/* ===============响应式布局========== */
+
+/* rem + vw 方案 单位规定 */
+html{
+    font-size:13.33333333vw
+}
+/* 媒体查询 */
+@media (min-width: 560px) {
+    html {
+      font-size: 54px;
+    }
+  }
+/* 单位规定结束 */
+
+.layout{
+    height:100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+/* 头部 */
+header {
+    width: 100%;
+    height: 10vh;
+    height: 2rem;
+    background: var(--background-color);
+    display: flex;
+    box-sizing:border-box;
+    z-index: 1;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+}
+.Core {
+    width: 100%;
+    height: 90vh;
+    flex: 0 0 100%;
+    display: flex;
+}
+.glide {
+    width: 100%;
+    height: 100%;
+    flex: 0 0 100%;
+    display: flex;
+    z-index:1;
+}
+/* 轮播的布局 -- 每个小核心 */ 
+.glide__slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+/* =============响应式框架结束============== */
+/* ================头部内部================ */
+/* logo */
+.myLogo{
+    width: 1rem;
+    margin: left 0;
+    margin-top: auto;
+}
+.Logo {
+    margin-top: auto;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    fill: rgb(0, 0, 0);
+}
+/* Nav */
+.myNav{
+    width: 3.5rem;
+    display: flex;
+    position: relative;
+    background-color: #EDE9E9;
+    border-radius: 0.9rem;
+    transform: translateX(0px);
+    font-size: 0.22rem;
+    margin:auto;
+    padding: 0.08rem;
+}
+.highLight{
+    position: absolute;
+    height: 0.45rem;
+    width: 1rem;
+    left: 0.1rem;
+    border-radius: 0.9rem;
+    background: rgb(255, 255, 255);
+    z-index: -1;
+    transition: all 650ms;
+}
+.myNav .nav{
+    display: flex;
+    height: 0.45rem;
+    margin: auto;
+    transition: opacity 0.3s ease 0s;
+    color: rgb(0, 0, 0);
+    line-height: 0.45rem;/* 文本垂直居中*/
+    text-align: center;/* 文本水平居中 */
+    border: none;
+    user-select: none;
+}
+.myNav .nav:hover{
+    display: flex;
+    height: 0.45rem;
+    margin: auto;
+    transition: opacity 0.3s ease 0s;
+    color: rgb(134, 160, 165);
+    line-height: 0.45rem;/* 文本垂直居中*/
+    text-align: center;/* 文本水平居中 */
+    transition: all 350ms;
+    cursor: pointer; 
+}
+
+.headerBalance {
+    width: 1rem;
+    margin-right: 0;
+    background-color: var(--primary-color);
+}
+/* ================头部结束================ */
+
+/* ================核心内部================ */
+/* 通过 iframe 拆成三个文件加载 */
+.glide__slide iframe{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* =================核心结束============= */
+#popup{
+    position:fixed; /*绝对定位*/
+    top:40%; /*距上部*/
+    left: 50%; /*距左部*/
+    width: 6rem; /*宽度*/
+    height: 1rem;
+    visibility: hidden; /*隐藏元素*/
+    opacity: 0; /*不透明度*/
+    transition: 0.5s; /*过渡时间*/
+    font-size: 0.2rem;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+}
+#popup.active{
+    top:60%; /*距上部*/
+    visibility: visible; /*显示元素*/
+    opacity: 1; /*不透明度*/
+    transition: 0.5s; /*过渡时间*/
+}
+input {
+	position:relative;
+	box-sizing:border-box;
+	width:5rem;
+    height: 0.7rem;
+	margin: auto;
+	border:2px solid rgba(0, 0, 0, 0.5);
+	font-size:1.75em;
+	color:rgba(0, 0, 0, 0.5);
+	border-radius:.25em;
+	background:transparent;
+	transition:all .100s;
+}
+.myInput:focus{
+    outline:none;
+    color:rgba(0, 0, 0, 0.75);
+    border-color:rgba(0, 0, 0, 0.75);
+}
+.myInput.keyup {
+    color:rgb(0, 0, 0);
+    border-color:rgb(0, 0, 0);
+    text-shadow:0 0 .125em rgb(0, 0, 0);
+    box-shadow:0 0 .25em rgb(0, 0, 0),inset 0 0rgb(0, 0, 0)m white;
+}
+/* 登录页面 */
+.Log{
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25);
+    height: 50%;
+    width: 40%;
+    position: absolute;
+    left: 30%;
+    top: 25%;
+    z-index: 4;
+    opacity: 0;
+    transition:opacity 1500ms;
+    pointer-events:none;
+}
+/* 第七层 */
+.closeLogFormBtn01{
+    top: 10px;
+    right: 6px;
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 2px;
+    background: currentColor;
+    transform: rotate(45deg);
+    border-radius: 5px;
+    color: black;
+    z-index: 7;
+}
+.closeLogFormBtn02{
+    top: 10px;
+    right: 6px;
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 2px;
+    background: currentColor;
+    transform: rotate(45deg);
+    border-radius: 5px;
+    color: black;
+    transform: rotate(-45deg);
+    z-index: 7;
+}
+
+.container{
+    height: 100%;
+    position: absolute; 
+    top: 0;
+    transition: all 0.6s ease-in-out;
+    border-radius: 1rem;
+}
+.container--signin{
+    left: 0;
+    width: 50%;
+    z-index: 4;
+}
+.container--signup{
+    left: 0;
+    width: 50%;
+    z-index: 3;
+    opacity: 0;
+}
+.container_overlay{
+    height: 100%;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transition: transform 0.6s ease-in-out;
+    width: 50%;
+    z-index: 6;
+}
+.overlay{
+    background-color: rgb(255, 255, 255);
+    background: url("../Image/Log_Background.JPG");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    left:-100%;
+    position: relative;
+    transform:translateX(0);
+    transition: transform 0.6s ease-in-out;
+    width: 200%;
+    border-radius: 1rem;
+}
+.overlay_panel{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition:  transform 0.6s ease-in-out;
+    width: 50%;
+}
+.overlay--left{
+    transform: translateX(-20%);
+}
+.Log_btn{
+    border-radius: 40rem;
+    border: 1px solid rgb(0, 0, 0);
+    color:rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 1000;
+    letter-spacing: 0.1rem;
+    padding: 0.9rem 4rem;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+.Log_form{
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.3rem;
+    height: 100%;
+    text-align: center;
+    opacity: 0.75;
+    border-radius: 1rem; 
+}
+.Log_btn:active{
+    transform: scale(0.95);
+}
+.Log_btn:focus{
+    outline: none;
+}
+.Log_input{
+    background-color: whitesmoke;
+    border: none;
+    padding: 0.9rem 0.9rem;
+    margin: 0.5rem 0;
+    width: 100%;
+}
+.Log_form_title{
+    font-weight:600;
+    margin: 0;
+    margin-bottom: 1.25rem;
+    color: black;
+}
+.Log_link{
+    color:rgb(255, 255, 255);
+    font-size: 0.9rem;
+    margin: 1.5rem 0;
+    text-decoration:    none;
+}
+.Log_form > .Log_btn{
+    margin-top: 1.5rem;
+}
+.Log.Log_active .container--signin{
+    transform: translateX(100%);
+    opacity: 0;
+}
+.Log.Log_active .container--signup{
+    animation: show 0.6s;
+    opacity: 1;
+    transform: translateX(100%);
+    z-index: 5;
+}
+.Log.Log_active .container_overlay{
+    transform: translateX(-100%);
+}
+.Log.Log_active .overlay{
+    transform:translateX(50%);
+}
+
+.Log.Log_active .overlay--left{
+    transform: translateX(0);
+}
+.overlay--right{
+    right: 0;
+    transform: translateX(0);
+}
+.Log.Log_active .overlay--right{
+    transform: translateX(20%);
+}
+

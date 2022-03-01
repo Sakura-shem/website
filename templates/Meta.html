@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <tittle>Meta</tittle> -->
+        <meta charset="UTF-8"> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/Meta.css') }}">
+    </head>
+    <body>
+        <!-- <br>
+        {{ Language }}
+        <br>
+        判断语言
+        {% if Language == "EN" %}
+            <br>
+            test
+            <br>
+            <form action="A hole to another universe">
+                <input type="password"/>
+            </form>
+        {% else %}
+            <br>
+            测试
+            <br>
+            <form action="A hole to another universe">
+                <input type="password"/>
+            </form>
+        {% endif %} -->
+        <Text>
+            <div class = "Text-content">
+                <h1>Hole To Another universe</h1>
+                <div class = "hole">
+                    <a href = "#" class = "ctn" onclick="Ajax()">Learn More</a>
+                </div>
+                <h2>Come On in!</h2>
+            </div>
+        </Text>
+    </body> 
+    <script>
+        function Ajax() {
+            // 通过这个对象发送请求
+            var myAjax = new XMLHttpRequest();
+            // 向服务器发送请求
+            myAjax.open("GET","http://127.0.0.1:5000/test?num=1",true);
+            myAjax.send()
+            // 回调函数，接受 服务器返回数据
+            myAjax.onreadystatechange = alertContents => {
+                if(myAjax.readyState == 4 && myAjax.status == 200) {
+					alert(myAjax.responseText);
+                }
+            };
+        }
+    </script>
+</html>

@@ -1,0 +1,42 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+Text{
+    width: 100vw;
+    height: 100vh;
+    background-color: #11214e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Text-content{
+    margin-bottom: 20px;
+    color: whitesmoke;
+    text-align: center;
+    font-family: cursive;
+}
+.Text-content h1{
+    font-size: 4vmin;
+}
+.Text-content h2{
+    font-size: 4vmin;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+.hole{
+    margin-top: 300px;
+    margin-bottom: 5px;
+}
+.ctn{
+    padding: 20px 3px;
+    background: rgb(0, 0, 0);
+    border-radius: 300px;
+    color: rgb(0, 0, 0);
+}

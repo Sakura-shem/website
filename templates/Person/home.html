@@ -1,0 +1,148 @@
+<!-- 平衡 home 的DIV -->
+<div class="homeBalance">
+</div>
+<!-- Home 设计 -->
+<div class="homeContent">
+  <div class="homeCard">
+    <div class="card-header">
+      <!-- 翻转 -->
+      <div class="homeLock" onclick="myblur()"></div>
+      <div class="card-cover" style="background-image: url('../static/Image/headPortrait.jpg')"></div>
+      <img class="card-avatar" src="../static/Image/headPortrait.jpg" alt="avatar" />
+      <h1 class="homeName">Shem</h1>
+      <h2 class="homeTitle">JLU Student</h2>
+    </div>
+    <div class="card-main">
+      <div class="card-section is-active" id="about">
+        <div class="card-content">
+          <div class="card-subtitle">ABOUT</div>
+          <p class="card-desc">沈·火星诗人·猫猫守护者·墓志铭·龙</p>
+          <div class="card-subtitle" id="myFun">FUN</div>
+          <!-- Swiper -->
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- 音乐播放器 -->
+                <div class="swiper-slide" id="myMusicPlayer">
+                  <div class="playerTrack" id="playerTrack">
+                    <div class="album-name" id="album-name"></div>
+                    <div class="track-name" id="track-name"></div>
+                    <div id="track-time">
+                      <div id="current-time"></div>
+                      <div id="track-length"></div>
+                    </div>
+                    <div class="s-area" id="s-area">
+                      <div id="ins-time"></div>
+                      <div id="s-hover"></div>
+                      <div id="seek-bar"></div>
+                    </div>
+                  </div>
+                  <div id="playerContent">
+                    <div class="album-art" id="album-art" style="bottom:0.3rem;">
+                      <img src="../static/Image/headPortrait.jpg" class="active" id="_1">
+                      <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_2.jpg" id="_2">
+                      <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg" id="_3">
+                      <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg" id="_4">
+                      <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_5">
+                      <div id="buffer-box">Buffering ...</div>
+                    </div>
+                    <div id="player-controls">
+                      <div class="control">
+                        <div class="button" id="repeatBtn">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat">
+                            <polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="control">
+                        <div class="button play-pause-button" id="play-pause-button">
+                          <div class="Pause Music_Play" id="Music_Play"></div>
+                          <div class="Play Music_Pause" id = "Music_Pause"></div>
+                        </div>
+                      </div>
+                      <div class="control">
+                        <div class="button" id="musicExtend">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2">
+                            <line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide" id="myPhotos"></div>
+                <div class="swiper-slide" id="none"></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div class="card-section" id="experience">
+        <div class="card-content">
+          <div class="card-subtitle">WORK EXPERIENCE</div>
+          <div class="card-timeline">
+            <ul>
+              <li>
+                <div class="card-item" data-year="2014">
+                  <div class="card-item-title">Front-end Developer at <span>JotForm</span></div>
+                  <div class="card-item-desc">Disrupt stumptown retro everyday carry unicorn.</div>
+                </div>
+              </li>
+              <li>
+                <div class="card-item" data-year="2016">
+                  <div class="card-item-title">UI Developer at <span>GitHub</span></div>
+                  <div class="card-item-desc">Developed new conversion funnels and disrupt.</div>
+                </div>
+              </li>
+              <li>
+                <div class="card-item" data-year="2018">
+                  <div class="card-item-title">Illustrator at <span>Google</span></div>
+                  <div class="card-item-desc">Onboarding illustrations for App.</div>
+                </div>
+              </li>
+              <li>
+                <div class="card-item" data-year="2020">
+                  <div class="card-item-title">Full-Stack Developer at <span>CodePen</span></div>
+                  <div class="card-item-desc">Responsible for the encomposing brand expreience.</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card-section" id="contact">
+        <div class="card-content">
+          <div class="card-subtitle">CONTACT</div>
+          <div class="card-contact-wrapper">
+            <div class="card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" /></svg>
+              Liaoning Shenyang
+            </div>
+            <div class="card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>(+86) 15040034282</div>
+            <div class="card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <path d="M22 6l-10 7L2 6" /></svg>
+              jinian6718@163.com
+            </div>
+            <a href="https://github.com/Sakura-shem">
+              <button class="contact-me" onclick="">WORK TOGETHER</button>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="card-buttons">
+        <button class="aboutBtn is-active" onclick = "cardChange(this)">ABOUT</button>
+        <button class="experienceBtn" onclick = "cardChange(this)">EXPERIENCE</button>
+        <button class="contactBtn" onclick = "cardChange(this)">CONTACT</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 游标导航栏 -->
+<div class="homePage"></div>

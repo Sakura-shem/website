@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8"> 
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- <tittle>Universe of Person</tittle> -->
+      <link rel="stylesheet" hred="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css"/>
+      <link rel="stylesheet" href="{{ url_for('static', filename='JS/Libs/glide/glide.core.min.css')}}"/>
+      <link rel="stylesheet" href="{{ url_for('static', filename='JS/Libs/glide/glide.theme.min.css')}}"/>
+      <link rel="stylesheet" href="{{ url_for('static', filename='JS/Libs/swiper/swiper.css')}}">
+      
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/Person.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/Person-home.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/Person-blogs.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/Person-projects.css') }}">
+    </head>
+    <body>
+      <!-- 音乐 -->
+      <audio id="sound" preload="auto" controls="1" loop="1" __idm_id__="1692172289">
+          <source src="../static/Audio/SKBLSJ.mp3" type="audio/mp3">
+      </audio>
+      <!-- 语言切换 -->
+      <!-- <br>
+      {{ Language }}
+      <br>
+      判断语言
+      {% if Language == "EN" %}
+          <br>
+          test
+          <br>
+          <form action="A hole to another universe">
+              <input type="password"/>
+          </form>
+      {% else %}
+          <br>
+          测试
+          <br>
+          <form action="A hole to another universe">
+              <input type="password"/>
+          </form>
+      {% endif %} -->
+      <div class="layout blur">
+        <!-- 头部 -->
+        <header>
+          <!-- Logo -->
+          <div class="myLogo">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+              <defs>
+                  <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
+                  <animateTransform
+                              attributeName="transform"
+                              begin="0s"
+                              dur="30s"
+                              type="scale"
+                              from="0 250 250"
+                              to="360 250 250"
+                              repeatCount="indefinite"
+                              id="Logo"
+                  />
+                  </path>
+              </defs>
+              <use xlink:href="#redstripe" />
+              <use xlink:href="#redstripe" transform="rotate(90 250 250)" />
+              <use xlink:href="#redstripe" transform="rotate(45 250 250)" />
+              <use xlink:href="#redstripe" transform="rotate(-45 250 250)" />
+              <text dy="70" textLength="1220" > 
+                      <textPath xlink:href="#textcircle" class="Logo">niverse of Person U</textPath>
+              </text>
+            </svg>
+          </div>
+
+          <!-- 导航 -->
+          <div class="myNav">
+            <div class="highLight"></div>
+            <div class="navHome nav" onclick="TurnHome()" id="navHome">Home</div>
+            <div class="navBlogs nav" onclick="TurnBlogs()" id="navBlogs">Blogs</div>
+            <div class="navProjects nav" onclick="TurnProjects()" id="navProjects">Projects</div>
+          </div>
+
+          <!-- 平衡导航栏的DIV -->
+          <div class="headerBalance"></div>
+        </header>
+
+        <div class="Core">
+          <!-- 轮播，使用glide JS插件 -->
+          <div class="glide">
+            <!-- 轮播轨道 -->
+            <div class="glide__track" data-glide-el="track">
+              <!-- 所有轮播容器 -->
+              <div class="glide__slides">
+                <!-- 第一个轮播开始 -- Home -->
+                <div class="glide__slide" id="myHome">
+                  <iframe src="{{ url_for('home')}} "></iframe>
+                </div>
+                <!-- 第一张轮播内容结束 -->
+
+                <!-- 第二张轮播 -- Blogs -->
+                <div class="glide__slide" id="myBlogs">
+                  <!-- 平衡 Blogs 的DIV -->
+                  <div class="BlogsBalance"></div>
+                  <div class="BlogsContent">
+                    <div class="BlogsSearchBar" id="BlogsSearchBar">
+                      <div id="serach-hover">
+                          <div class="search-tb">
+                            <div class="search-td"><input id="search-input" type="text" style="outline: none;border: 0;" onkeydown="search_submit()" placeholder="Search" required></div>
+                            <div class="search-td" id="search-cover">
+                              <button type="search-submit"><div id="search-circle"></div><span></span></button>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="BlogsPage"></div>
+                </div>
+                <!-- 第二张轮播内容结束 -->
+
+                <!-- 第三张轮播 -- Projects -->
+                <div class="glide__slide" id="myProjects">
+                  <h1>test</h1>
+                </div>
+                <!-- 第三张轮播内容结束 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 核心结束 -->
+      </div>
+      <!-- 弹出窗体 AJAX -->
+      <div id="popup">
+        <input class="myInput" type="text" placeholder="Type for pixie dust..."/>
+        <a href="#" onclick="myclear()">Close</a><!--弹出窗体触发事件（关闭）-->
+      </div>
+
+      <!-- 登录页面  AJAX -->
+      <div class="Log Log_active" id="Log">
+        <!-- 关闭按钮 -->
+        <div class="closeLogFormBtn01" id = "closeLogFormBtn01"></div>
+        <div class="closeLogFormBtn02" id = "closeLogFormBtn02"></div>
+        <!-- 注册框 -->
+        <div class="container container--signup">
+          <form action="#" class="Log_form" id = "signup_form">
+            <h2 class="Log_form_title">注册账号</h2>
+            <input type="text" class="Log_input" placeholder="User">
+            <input type="email" class="Log_input" placeholder="Email">
+            <input type="password" class="Log_input" placeholder="Password">
+            <button class="Log_btn">注册</button>
+          </form>
+        </div>
+        <!-- 登录框 -->
+        <div class="container container--signin">
+          <form action="#" class="Log_form" id = "signin_form">
+            <h2 class="Log_form_title">欢迎登录</h2>
+            <input type="email" class="Log_input" placeholder="Email">
+            <input type="password" class="Log_input" placeholder="Password">
+            <a href="#" class="Log_link">忘记密码？</a>
+            <button class="Log_btn">登录</button>
+          </form>
+        </div>
+        <!-- 幕布 -->
+        <div class="container_overlay">
+          <div class="overlay">
+            <div class="overlay_panel overlay--left">
+              <button class="Log_btn" id="signin">登录</button>
+            </div>
+            <div class="overlay_panel overlay--right">
+              <button class="Log_btn" id="signup">注册</button>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 脚本引用 -->
+      <script src="../static/JS/Libs/anime/anime.min.js"></script>
+      <script src="../static/JS/Libs/glide/glide.min.js"></script>
+      <script src="../static/JS/Libs/swiper/swiper-bundle.min.js"></script>
+      <script src="../static/JS/Person.js"></script>
+    </body> 
+</html>

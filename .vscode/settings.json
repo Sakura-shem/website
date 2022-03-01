@@ -1,0 +1,14 @@
+{
+    "python.analysis.extraPaths": [
+        "./Wechat/core",
+        "./spider/JLU_spider",
+        "./modules",
+        "./C4/core",
+        "./C4/core/FID3",
+        "./C4/core/Mind_wave",
+        "./Ultimate-Desktop/Modules",
+        "./Works/Steganography",
+        "./Deep-Learning/yolov5/models",
+        "./Deep-Learning/yolov5/utils"
+    ],
+}

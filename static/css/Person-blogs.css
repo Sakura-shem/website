@@ -1,0 +1,156 @@
+/* ============= Blogs================== */
+#myBlogs{
+    background: var(--background-color);
+    display: flex;
+    width: 100vw;
+    height: auto;
+}
+.BlogsBalance{
+    width: 12%;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+.BlogsContent{
+    width: 76%;
+    height: 100vh;
+    background-color: var(--background-color);  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#BlogsSearchBar{
+    position: relative;
+    display: flex;
+    width: 85%;
+    height: 2rem;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin-top: -70vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ff7575;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 40px #ff7c7c, 0 0 0 20px #ffffffeb;
+    transform: scale(0.5);
+}
+#serach-hover{
+    position: relative;
+    display: flex;
+    width: 95%;
+    height: 1.5rem;
+    margin: auto;
+}
+.search-tb{
+    display: table;
+    width: 100%;
+    height: 1.5rem;
+    margin: auto;
+}
+.search-td{
+    display: table-cell;
+    vertical-align: middle;
+    margin: auto;
+}
+.search-td input,
+.search-td button{
+    color: #fff;
+    font-family: Nunito;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+}
+.search-td input[type="text"]{
+    width: 100%;
+    height: 96px;
+    font-size: 1rem;
+    line-height: 1;
+    bottom:0.15rem;
+}
+.search-td input[type="text"]::placeholder{
+    color: #e16868;
+}
+#search-cover{
+    width: 1px;
+    padding-left: 35px;
+}
+.search-td button{
+    position: relative;
+    display: block;
+    width: 1.5rem;
+    height: 1.75rem;
+    cursor: pointer;
+}
+.search-td button span{
+    position: absolute;
+    top: 68px;
+    left: 43px;
+    display: block;
+    width: 54px;
+    height: 15px;
+    background-color: transparent;
+    border-radius: 10px;
+    transform: rotateZ(52deg);
+    transition: 0.5s ease all;
+}
+.search-td button span::before,
+.search-td button span:after{
+    content: "";
+    position: absolute;
+    top: 0.1rem;
+    right: 0.6rem;
+    width: 0.5rem;
+    height: 0.25rem;
+    background-color: #fff;
+    border-radius: 10px;
+    transform: rotateZ(0);
+    transition: 0.5s ease all;
+}
+#search-circle{
+    position: relative;
+    bottom: 0.2rem;
+    left: 0.2rem;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0;
+    border-width: 0.2rem;
+    border: 0.25rem solid #fff;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: 0.5s ease all;
+}
+#search-cover:hover #search-circle{
+    /* top: -1px; */
+    width: 1.25rem;
+    height: 0.3rem;
+    bottom:0.15rem;
+    border-width: 0;
+    background-color: #fff;
+    border-radius: 20px;
+}
+#search-cover:hover span{
+    top: 0.6rem;
+    width: 1.2rem;
+    margin-top: 0rem;
+    transform: ratateZ(0);
+}
+#search-cover:hover span::before{
+    top: 0.3rem;
+    left:0.3rem;
+    width:0.6rem;
+    transform: rotateZ(80deg);
+}
+#search-cover:hover span::after{
+    width:0.6rem;
+    right:0.6rem;
+    transform: rotateZ(-10deg);
+}
+.BlogsPage{
+    width: 12%;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+/* ============= Blogs结束 =============== */
