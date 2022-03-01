@@ -91,30 +91,16 @@
               <div class="glide__slides">
                 <!-- 第一个轮播开始 -- Home -->
                 <div class="glide__slide" id="myHome">
-                  <iframe src="{{ url_for('home')}} "></iframe>
+                  {% include "Person/home.html" %}
                 </div>
                 <!-- 第一张轮播内容结束 -->
 
                 <!-- 第二张轮播 -- Blogs -->
                 <div class="glide__slide" id="myBlogs">
-                  <!-- 平衡 Blogs 的DIV -->
-                  <div class="BlogsBalance"></div>
-                  <div class="BlogsContent">
-                    <div class="BlogsSearchBar" id="BlogsSearchBar">
-                      <div id="serach-hover">
-                          <div class="search-tb">
-                            <div class="search-td"><input id="search-input" type="text" style="outline: none;border: 0;" onkeydown="search_submit()" placeholder="Search" required></div>
-                            <div class="search-td" id="search-cover">
-                              <button type="search-submit"><div id="search-circle"></div><span></span></button>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="BlogsPage"></div>
+                  {% include "Person/blogs.html" %}
                 </div>
                 <!-- 第二张轮播内容结束 -->
-
+                
                 <!-- 第三张轮播 -- Projects -->
                 <div class="glide__slide" id="myProjects">
                   <h1>test</h1>
@@ -126,6 +112,7 @@
         </div>
         <!-- 核心结束 -->
       </div>
+
       <!-- 弹出窗体 AJAX -->
       <div id="popup">
         <input class="myInput" type="text" placeholder="Type for pixie dust..."/>
@@ -169,7 +156,6 @@
           </div>
         </div>
       </div>
-
       <!-- 脚本引用 -->
       <script src="../static/JS/Libs/anime/anime.min.js"></script>
       <script src="../static/JS/Libs/glide/glide.min.js"></script>

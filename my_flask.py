@@ -31,17 +31,6 @@ def Person():
     # print(response)
     return render_template("Person/Person.html", Language = Language)
 
-@app.route("/home", methods = ['GET'])
-def home():
-    # 获取 IP ---> 决定中英文页面
-    # 默认英文展示
-    ip = request.remote_addr
-    Language = "EN"
-    # response = requests.get("http://ip-api.com/json/" + ip).text
-    # response = json.loads(response) # 将网页的 json 格式的字符串数据转成字典
-    # print(response)
-    return render_template("Person/home.html", Language = Language)
-
 
 # Ajax 请求
 @app.route("/test", methods=["GET", "POST"])

@@ -1,11 +1,11 @@
 /* ============= Home================== */
 .homeBalance{
-    width: 12%;
+    width: 12vw;
     height: 100vh;
     background-color: var(--background-color);
 }
 .homeContent{
-    width: 76%;
+    width: 76vw;
     height: 100vh;
     background-color: var(--background-color);  
     display: flex;
@@ -648,7 +648,7 @@ background: linear-gradient(
 );
 }
 .homePage{
-    width: 12%;
+    width: 12vw;
     height: 100vh;
     background-color: var(--background-color);
 }
