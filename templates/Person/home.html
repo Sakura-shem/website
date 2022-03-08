@@ -19,62 +19,49 @@
           <div class="card-subtitle">ABOUT</div>
           <p class="card-desc">沈·火星诗人·猫猫守护者·墓志铭·龙</p>
           <div class="card-subtitle" id="myFun">FUN</div>
-          <!-- Swiper -->
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <!-- 音乐播放器 -->
-                <div class="swiper-slide" id="myMusicPlayer">
-                  <div class="playerTrack" id="playerTrack">
-                    <div class="album-name" id="album-name"></div>
-                    <div class="track-name" id="track-name"></div>
-                    <div id="track-time">
-                      <div id="current-time"></div>
-                      <div id="track-length"></div>
-                    </div>
-                    <div class="s-area" id="s-area">
-                      <div id="ins-time"></div>
-                      <div id="s-hover"></div>
-                      <div id="seek-bar"></div>
-                    </div>
-                  </div>
-                  <div id="playerContent">
-                    <div class="album-art" id="album-art" style="bottom:0.3rem;">
-                      <img src="../static/Image/headPortrait.jpg" class="active" id="_1">
-                      <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_2.jpg" id="_2">
-                      <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg" id="_3">
-                      <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg" id="_4">
-                      <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_5">
-                      <div id="buffer-box">Buffering ...</div>
-                    </div>
-                    <div id="player-controls">
-                      <div class="control">
-                        <div class="button" id="repeatBtn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat">
-                            <polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="control">
-                        <div class="button play-pause-button" id="play-pause-button">
-                          <div class="Pause Music_Play" id="Music_Play"></div>
-                          <div class="Play Music_Pause" id = "Music_Pause"></div>
-                        </div>
-                      </div>
-                      <div class="control">
-                        <div class="button" id="musicExtend">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2">
-                            <line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
+          <!-- 音乐播放器 -->
+          <div class="myMusicPlayer" id="myMusicPlayer">
+            <div class="playerTrack" id="playerTrack">
+              <div class="album-name" id="album-name"></div>
+              <div class="track-name" id="track-name"></div>
+              <div id="track-time">
+                <div id="current-time"></div>
+                <div id="track-length"></div>
+              </div>
+              <div class="s-area" id="s-area">
+                <div id="ins-time"></div>
+                <div id="s-hover"></div>
+                <div id="seek-bar"></div>
+              </div>
+            </div>
+            <div id="playerContent">
+              <div class="album-art" id="album-art" style="bottom:0.3rem;">
+                <img src="../static/Image/headPortrait.jpg" class="active" id="_1">
+                <div id="buffer-box">Buffering ...</div>
+              </div>
+              <div id="player-controls">
+                <div class="control">
+                  <div class="button" id="repeatBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat">
+                      <polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                    </svg>
                   </div>
                 </div>
-                <div class="swiper-slide" id="myPhotos"></div>
-                <div class="swiper-slide" id="none"></div>
+                <div class="control">
+                  <div class="button play-pause-button" id="play-pause-button">
+                    <div class="Pause Music_Play" id="Music_Play"></div>
+                    <div class="Play Music_Pause" id = "Music_Pause"></div>
+                  </div>
+                </div>
+                <div class="control">
+                  <div class="button" id="musicExtend">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2">
+                      <line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!-- 如果需要分页器 -->
-            <div class="swiper-pagination"></div>
           </div>
         </div>
       </div>

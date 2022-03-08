@@ -126,7 +126,7 @@ function Control() {
             btn.style.display = 'none';
         });
         albumArt.forEach((btn) => {
-            btn.style.bottom = '0.55rem';
+            btn.style.bottom = '0.75rem';
         });
         playerTrack.forEach((btn) => {
             console.log(btn);

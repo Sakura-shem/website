@@ -164,39 +164,7 @@
 margin-top: 0.3rem;
 margin-bottom: 0%;
 }
-/* ================ Swiper ========== */
-.swiper-container {
-    display: flex;
-    flex-direction: row;
-    width: 6rem;
-    height: 2rem;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 0.45rem;
-    font-size: 0.2rem;
-}
-.swiper-wrapper{
-    display: flex;
-    flex-direction: column;
-}
-.swiper-slide{
-    width: 100%;
-    height: 100%;
-}
-.swiper-slide-prev,
-.swiper-slide-duplicate-active,
-.swiper-slide-duplicate-next,
-.swiper-slide-next{
-    opacity: 0;
-}
-/* 分页器位置 */
-.swiper-pagination-vertical.swiper-pagination-bullets, 
-.swiper-vertical>.swiper-pagination-bullets {
-right: 0.5rem;
-top: 56%;
-transform: translate3d(0px,-50%,0);
-}
-/* =========== Swiper结束 =========== */
+
 /* About */
 .card-desc {
 line-height: 1.6;
@@ -223,18 +191,19 @@ font-weight: 400;
     box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
     border-radius: 0.3rem;
     font-size: 0.2rem;
+    transition: 0.5s;
 }
 #album-art {
-    position: absolute;
-    width: 1.6rem;
-    height: 1.6rem;
+    position: relative;
+    width: 3rem;
+    height: 1.3rem;
     margin-top: 0rem;
-    margin-left: 0.45rem;
+    margin-left: 0.35rem;
     box-shadow: 0 0 0 0.15rem #fff;
     border-radius: 50%;
     overflow: hidden;
     transform: rotateZ(0);
-    transition: all 500ms;
+    transition: all 350ms;
 }
 #album-art:before {
     content: "";
@@ -311,18 +280,20 @@ font-weight: 400;
 }
 
 #player-controls {
-    width: 7rem;
+    width: 8rem;
     height: 100%;
-    margin-left: 2.2rem;
+    margin-left: 0.5rem;
     margin-bottom: 0.2rem;
-    margin-right: 0.2rem;
+    margin-right: 0.3rem;
     display: flex;
     flex-direction: row;
     overflow: hidden;
 }  
 .control {
     width: 0.8rem;
-    margin: auto;
+    margin-left: 0.3rem;
+    margin-top:auto;
+    margin-bottom:auto;
 }
 .button {
     height: 0.8rem;
@@ -373,7 +344,7 @@ font-weight: 400;
 }
 #album-name {
     color: #000000;
-    font-size: 0.25rem;
+    font-size: 0.2rem;
     font-weight: 650;
     position: relative;
     padding-top: 0.1rem;
@@ -383,7 +354,7 @@ font-weight: 400;
 }
 #track-name {
     color: #acaebd;
-    font-size: 0.2rem;
+    font-size: 0.15rem;
     font-weight: bold;
     position: relative;
     margin-left: 1.2rem;
@@ -463,10 +434,10 @@ font-weight: 400;
 .Play{
     display: none;
     position: relative;
-    width: 0.13rem;
+    width: 0.2rem;
     height: 0.35rem;
     top: 0.22rem;
-    left: 0.28rem;
+    left: 0.29rem;
     border-left: 0.05rem solid;
     border-right: 0.05rem solid;
     color: rgb(48, 43, 43);

@@ -154,11 +154,11 @@ header {
 
 /* =================核心结束============= */
 #popup{
-    position:fixed; /*绝对定位*/
-    top:40%; /*距上部*/
-    left: 50%; /*距左部*/
-    width: 6rem; /*宽度*/
-    height: 1rem;
+    position:fixed;
+    width: 100vw;
+    height: 100vh;
+    flex: 0 0 100%;
+    display: flex;
     visibility: hidden; /*隐藏元素*/
     opacity: 0; /*不透明度*/
     transition: 0.5s; /*过渡时间*/
@@ -168,7 +168,7 @@ header {
     flex-direction: row;
 }
 #popup.active{
-    top:60%; /*距上部*/
+    top:0%; /*距上部*/
     visibility: visible; /*显示元素*/
     opacity: 1; /*不透明度*/
     transition: 0.5s; /*过渡时间*/
@@ -178,7 +178,7 @@ input {
 	box-sizing:border-box;
 	width:5rem;
     height: 0.7rem;
-	margin: auto;
+	margin:auto;
 	border:2px solid rgba(0, 0, 0, 0.5);
 	font-size:1.75em;
 	color:rgba(0, 0, 0, 0.5);
