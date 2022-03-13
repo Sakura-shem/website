@@ -1,0 +1,35 @@
+
+            *{
+                margin:0;
+                padding:0;
+            }
+            #outer{
+                width:533px;
+                margin:50px auto;
+                background-color: rgb(216, 27, 37);
+                padding:10px;
+                text-align: center;
+            }
+            #buttons{
+                position:absolute; 
+                height: 10px;
+                width:100px; 
+                z-index:2;
+            
+                 margin-left: 730px; 
+                 margin-top:-100px;
+                /* bottom:20px;  */
+                /* left:250px; */
+                /* background:rgb(121, 9, 9);  */
+            }
+            #buttons span{
+                cursor:pointer;/*假超链接样式*/ 
+                float:left; 
+                border:1px  solid #fff;
+                width:10px;                 
+                height:10px;     
+                border-radius:10px; 
+                background:#333; 
+                margin-right:5px;
+            }
+            #buttons .on{background:rgb(25, 131, 192);}

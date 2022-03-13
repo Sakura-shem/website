@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户登录</title>
+    <style>
+    	h3{
+    		font-family: "华文楷体";
+            color: rgb(255, 255, 255);
+            font-size:30px;
+    	}
+    	html,body{
+            width:100%;
+            height:100%
+        }
+        body{
+            font-family: "华文隶书";
+            background-image:url("images/log_background.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        #div_login{
+             width:500px;
+            height: 380px;
+            /* float:center; */
+            margin-left:500px;
+            margin-top:140px;
+            background-color: rgba(126, 134, 11, 0.342);
+            padding: 10px;
+            border-width: 20px; 
+             border-color:rgb(224, 110, 110) ;
+            /* text-align: center;  */
+        }
+        #div_title{
+            width: 500px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 25px;
+            color:rgb(0, 14, 54);
+        }
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        #midden{
+            width:500px;
+            height:500px;
+        
+        }
+        .inputinfo{
+            width: 480px;
+            height:30px;
+            margin:10px 10px 10px 10px;
+        }
+        .submitbutton{
+            width: 480px;
+            height:40px;
+            margin:10px 10px 10px 10px;
+            background-color: dodgerblue;
+            border-radius: 10px;/*按钮为圆角正方形*/
+        }
+        #info{
+            width:200px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .an {
+            border: none;
+            width: 80px;
+            height: 20px;
+            color: #fff;
+            border-radius: 5px;/*按钮为圆角正方形*/
+            background: darkturquoise;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .cet{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+	<form action="wait.html" method="get">
+		<div id="div_login">
+        <div id="div_title"><h1>疲劳感知系统</h1></div>
+            <div id="midden">
+                <p><h3>用户名:</h3><input class="inputinfo" type="text" name="UserName" placeholder="请输入用户名"></p>
+                <p><h3>密码:</h3><input class="inputinfo" type="password" name="PassWord" placeholder="请输入密码"></p>
+                <input type="submit" class="submitbutton" value="登录">
+                <!-- <div id="info">
+                    
+             </div> -->
+             <div class="cet">
+                 <button class="an">忘记密码</button>
+                 <button class="an">忘记用户名</button>
+                 <button class="an">注册</button>
+             </div>
+             
+
+         </div>
+        
+        </div>
+	</form>
+</body>
+</html>

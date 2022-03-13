@@ -1,0 +1,17 @@
+DROP TABLE IF EXISTS `test`.`pic`;     //删除之前建立的表pic
+create table `test`.`Blink`(
+	id int (11) not NULL,
+	num int not null
+);
+create table `c4`.`Pluse`(
+	id int (11) not NULL,
+	num int not null
+);
+create table `c4`.`Sound`(
+	id int (11) not NULL,
+	num int not null
+);
+create table `c4`.`Attention`(
+	id int (11) not NULL,
+	num int not null
+);

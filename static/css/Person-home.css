@@ -1,20 +1,19 @@
 /* ============= Home================== */
 .homeBalance{
-    width: 12vw;
+    width: 2vw;
     height: 100vh;
     background-color: var(--background-color);
 }
 .homeContent{
-    width: 76vw;
+    width: 96vw;
     height: 100vh;
     background-color: var(--background-color);  
-    display: flex;
     flex-direction: column;
 }
 .homeCard{
-    width: 8rem;
-    height: 10rem;
-    margin-top: 10vh;
+    width: 7rem;
+    height: 9.5rem;
+    margin-top: 5vh;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -66,14 +65,12 @@
         cursor: pointer;
     }
     .card-cover {
+        position:relative;
         width: 100%;
-        height: 100%;
-        position: absolute;
-        height: 2.5rem;
+        height: 60%;
         will-change: top;
         background-size: cover;
         filter: blur(0.1rem);
-        transform: scale(1.2);
         transition: 0.5s;
     }
     .card-avatar {
@@ -182,7 +179,7 @@ font-weight: 400;
 #playerContent{
     display: flex;
     flex-direction: row;
-    width: 5.7rem;
+    width: 100%;
     height: 1.3rem;
     margin-right: auto;
     margin-left: auto;
@@ -619,7 +616,7 @@ background: linear-gradient(
 );
 }
 .homePage{
-    width: 12vw;
+    width: 2vw;
     height: 100vh;
     background-color: var(--background-color);
 }

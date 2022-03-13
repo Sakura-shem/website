@@ -1,0 +1,1 @@
+此程序来自于 android SDK， 我们是在其基础上， 将UUID修改为蓝牙SPP服务的标准UUID

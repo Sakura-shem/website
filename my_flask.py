@@ -30,6 +30,9 @@ def Person():
     # print(response)
     return render_template("Person/Person.html", Language = Language)
 
+@app.route('/BlogContent', methods=['GET'])
+def dataQuery():
+    return render_template("Blogs/C4.html")
 
 # Ajax 请求
 @app.route("/test", methods=["GET", "POST"])
@@ -43,7 +46,7 @@ def test():
     #不存在时返回None
     num = requestArgs.get("num")
     print("num")
-    return num
+    return render_template("Blogs/C4.html")
 
 if __name__ =="__main__":
     app.run(debug = True)

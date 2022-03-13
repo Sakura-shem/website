@@ -1,0 +1,144 @@
+<DOCTYPE html>
+
+    <html>
+
+    <head>
+
+        <meta charset="utf-8" />
+
+        <title>
+
+            lunbo
+
+        </title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            #outer {
+                width: 533px;
+                margin: 50px auto;
+                background-color: rgb(216, 27, 37);
+                padding: 10px;
+                text-align: center;
+            }
+
+            #buttons {
+                position: absolute;
+                height: 10px;
+                width: 100px;
+                z-index: 2;
+
+                margin-left: 730px;
+                margin-top: -100px;
+                /* bottom:20px;  */
+                /* left:250px; */
+                /* background:rgb(121, 9, 9);  */
+            }
+
+            #buttons span {
+                cursor: pointer;
+                /*假超链接样式*/
+                float: left;
+                border: 1px solid #fff;
+                width: 10px;
+                height: 10px;
+                border-radius: 10px;
+                background: #333;
+                margin-right: 5px;
+            }
+
+            #buttons .on {
+                background: rgb(25, 131, 192);
+            }
+
+
+
+
+
+            ul {
+                list-style-type: none;
+                margin-left: 144px;
+                padding: 0;
+                width: 350px;
+                background-color: #da1a1a;
+                position: fixed;
+                height: 443px;
+                overflow: auto;
+
+            }
+
+            li a {
+                background-color: #9611cae5;
+                display: block;
+                color: #000;
+                padding: 8px 16px;
+                text-decoration: none;
+            }
+
+            li a.active {
+                background-color: #0c8171;
+                color: white;
+            }
+
+            li a:hover:not(.active) {
+                background-color: #555;
+                color: white;
+            }
+        </style>
+
+        <!-- <style src="t.css"></style> -->
+
+    </head>
+
+    <body background="images/b2.jpg">
+
+
+
+
+        <ul>
+            <li><a  >热门推荐</a></li>
+            <br>
+            <li><a  >用户帮助</a></li>
+            <br>
+            <li><a  >联系我们</a></li>
+            <br>
+            <li><a  >产品激活</a></li>
+          </ul>
+        <script src="f.js"></script>
+
+        <div id="outer">
+
+            <a href="https://www.baidu.com">
+                <img id=imge src=images/1.jpg alt="1" />
+            </a>
+
+            <button id="first">返回第一功能</button>
+
+            <button id="prev">上一功能</button>
+
+            <button id="next">下一功能</button>
+
+            <button id="last">返回最后功能</button>
+        </div>
+
+        <div id="buttons">
+
+            <span index="1" class="on"> </span>
+
+            <span index="2"></span>
+
+            <span index="3"></span>
+
+            <span index="4"></span>
+
+            <span index="5"></span>
+
+        </div>
+
+
+    </body>
+
+    </html>

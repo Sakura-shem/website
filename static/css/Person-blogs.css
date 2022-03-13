@@ -6,31 +6,28 @@
     height: auto;
 }
 .BlogsBalance{
-    width: 12%;
+    width: 10%;
     height: 100vh;
     background-color: var(--background-color);
 }
 .BlogsContent{
-    width: 76%;
+    width: 80vw;
     height: 100vh;
+    position: relative;
     background-color: var(--background-color);  
-    display: flex;
-    flex-direction: column;
     justify-content: center;
+	margin:auto;
 }
 
 #BlogsSearchBar{
     position: relative;
-    display: flex;
-    width: 85%;
-    height: 2rem;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin-top: -70vh;
-    margin-left: auto;
-    margin-right: auto;
+    /* display: flex; */
+    width: 90vw;
+    padding:0;
+    margin-left: -5vw;
+	margin-top:2vh;
+    /* margin-right: -43vw; */
+    height: 1.6rem;
     background-color: #ff7575;
     border-radius: 0.5rem;
     box-shadow: 0 10px 40px #ff7c7c, 0 0 0 20px #ffffffeb;
@@ -39,7 +36,7 @@
 #serach-hover{
     position: relative;
     display: flex;
-    width: 95%;
+    width: 100%;
     height: 1.5rem;
     margin: auto;
 }
@@ -69,6 +66,7 @@
     font-size: 1rem;
     line-height: 1;
     bottom:0.15rem;
+    padding-left:1rem;
 }
 .search-td input[type="text"]::placeholder{
     color: #e16868;
@@ -149,8 +147,108 @@
     transform: rotateZ(-10deg);
 }
 .BlogsPage{
-    width: 12%;
+    width: 10vw;
     height: 100vh;
     background-color: var(--background-color);
 }
+/* ========= Article 开始 ========= */
+.BlogsArticle{
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    top:2vh;
+    margin:auto;
+}
+.ArticleContainer {
+	display:flex;
+	position: relative;
+    flex-flow: wrap;
+    align-content: flex-start;
+	width:80vw;
+	padding-left:12vw;
+	padding-right:12vw;
+}
+
+.cover {
+	display: inline-block;
+	height: 200px;
+	width: 320px;
+	margin: 15px;
+	border-radius: 8px;
+}
+
+.ArticleImg {
+	width: 6rem;
+	height:3.5rem;
+	padding-left:0rem;
+	padding-right:0rem;
+	border-radius: 8px;
+	transform-style: preserve-3d;
+	-webkit-tap-highlight-color: rgba(#000,0);
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.ArticleImg img {
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(14,21,47,0.25);
+}
+
+.ArticleImg-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+	transition: all 0.2s ease-out;
+    
+}
+
+.ArticleImg-container.over .ArticleImg-shadow {
+	box-shadow: 0 45px 100px rgba(14,21,47,0.4), 0 16px 40px rgba(14,21,47,0.4);
+}
+
+.ArticleImg-layers {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+	overflow: hidden;
+	transform-style: preserve-3d;
+}
+
+.ArticleImg-rendered-layer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0%; 
+	left: 0%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: transparent;
+	background-size: cover;
+	transition: all 0.1s ease-out;
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.ArticleImg-shadow {
+	position: absolute;
+	top: 5%; 
+	left: 5%;
+	width: 90%;
+	height: 90%;
+	transition: all 0.2s ease-out;
+	box-shadow: 0 8px 30px rgba(14,21,47,0.6);
+}
+
+.ArticleImg-shine {
+	position: relative;
+	top: 0; 
+	left: 0; 
+	right: 0; 
+	bottom: 0;
+	border-radius: 8px;
+	background: linear-gradient(135deg, rgba(255,255,255,.25) 0%,rgba(255,255,255,0) 60%);
+}
+/* ========= Article 结束 ========= */
 /* ============= Blogs结束 =============== */
